@@ -24,7 +24,7 @@ for (var i = 0; i < text.length; i++) {
   if (emtyArray[i] == "a" || emtyArray[i] == "A") {console.log("Swap letter with object array");};//Working simplify code
 
 }
-console.log(emtyArray);
+console.log(emtyArray); // shows the array of the typed in string
 }
 }
 
