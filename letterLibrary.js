@@ -10,20 +10,36 @@ if(event.keyCode === 13){
   var text = document.getElementsByTagName("h1")[0].innerHTML = inputLength.value;
   // console.log(text.length);
 
-  var LetterSwap = {
+
+emtyArray = [];
+for (var i = 0; i < text.length; i++) {
+  emtyArray = text.split('');
+
+  // if (text === " ") {} // TODO add an if statement saying if there is space in array deleat it...
+
+var LetterSwap = {
   a: "!",
   b: "@",
   c: "#",
   d: "$"
 }
+  tstString = "";
+  for (var obj = 0; obj < Object.keys(LetterSwap).length; obj++) {
+    // if (emtyArray[i] == Object.keys(LetterSwap)) {
+    //   console.log("yeet");
 
-
-emtyArray = [];
-for (var i = 0; i < text.length; i++) {
-  emtyArray = text.split('');
-  if (emtyArray[i] == "a" || emtyArray[i] == "A") {console.log("Swap letter with object array");};//Working simplify code
+    // }
+    tstString = Object.values(obj);
+    // console.log(obj);
+  //   for (LetterSwap in emtyArray) {
+  //   console.log('eyy');
+  // }
+  }
+  // if (LetterSwap) {}
+  // if (emtyArray[i] == "a" || emtyArray[i] == "A") {console.log("Swap letter with object array");};//Working simplify code
 
 }
+console.log(tstString);
 console.log(emtyArray); // shows the array of the typed in string
 }
 }
