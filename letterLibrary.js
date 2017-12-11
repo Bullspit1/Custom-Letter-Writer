@@ -10,37 +10,70 @@ if(event.keyCode === 13){
   var text = document.getElementsByTagName("h1")[0].innerHTML = inputLength.value;
   // console.log(text.length);
 
-
 emtyArray = [];
 for (var i = 0; i < text.length; i++) {
   emtyArray = text.split('');
 
   // if (text === " ") {} // TODO add an if statement saying if there is space in array deleat it...
 
-var LetterSwap = {
+    // console.log(Object.keys(LetterSwap)[i]);
+    // console.log(new RegExp(/^(a|A)$/));
+    // console.log(text);
+
+
+  // var keys = Object.keys(LetterSwap);
+
+  // for (var value in LetterSwap) {
+    // if (emtyArray[i] == Object.keys(LetterSwap)) {
+    //   console.log("yeet");
+
+    // }
+    // console.log(Object.keys(LetterSwap));
+    // console.log(LetterSwap[value]);
+    // console.log(value.split(''));
+    // console.log(value);
+    // if (Object.keys(LetterSwap)) {
+    //   // console.log(Object.keys(LetterSwap));
+    //   // console.log(value);
+    //   // tstString = LetterSwap[value];
+    // }
+    // tstString += Object.values(obj);
+    // console.log(obj);
+  //   for (LetterSwap in emtyArray) {
+  //   console.log('eyy');
+  // }
+  // }
+  // if (LetterSwap) {}
+  // if (emtyArray[i] == "a" || emtyArray[i] == "A") {console.log("Swap letter with object array");};//Working simplify code
+
+}
+// console.log(tstString);
+console.log(emtyArray); // shows the array of the typed in string
+  tstString = "";
+  for (var letter = 0; letter < emtyArray.length; letter++) {
+// console.log(emtyArray[letter]);
+    var LetterSwap = {
   a: "!",
   b: "@",
   c: "#",
   d: "$"
 }
-  tstString = "";
-  for (var obj = 0; obj < Object.keys(LetterSwap).length; obj++) {
-    // if (emtyArray[i] == Object.keys(LetterSwap)) {
-    //   console.log("yeet");
 
-    // }
-    tstString = Object.values(obj);
-    // console.log(obj);
-  //   for (LetterSwap in emtyArray) {
-  //   console.log('eyy');
-  // }
+// if (LetterSwap) {}
+  for (var value in LetterSwap) {
+    // console.log(emtyArray[letter] === value);
+    // console.log(emtyArray[letter]);
+    // console.log(value);
+    if (emtyArray[letter] === value) {
+      // console.log(LetterSwap[value]);
+      // console.log(Object.values(LetterSwap));
+      // console.log(LetterSwap[value])
+      // tstString = Object.values(LetterSwap);
+      tstString += LetterSwap[value];
+    }
   }
-  // if (LetterSwap) {}
-  // if (emtyArray[i] == "a" || emtyArray[i] == "A") {console.log("Swap letter with object array");};//Working simplify code
-
-}
-console.log(tstString);
-console.log(emtyArray); // shows the array of the typed in string
+  }
+  console.log(tstString)
 }
 }
 
